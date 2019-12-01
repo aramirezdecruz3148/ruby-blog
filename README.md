@@ -1,3 +1,3 @@
 # NOTES
 
-* Beginning final 3rd of tutorial
+* Once complete, use this file to reference the tutorial
