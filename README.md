@@ -1,8 +1,8 @@
 # To Do
 
 * Create a new branch to try to add a picture to each blog post
-* Change articles display to be list instead of table
 * Figure out how to add styling to each view
+* Instead of welcome, make articles the root of app
 * Investigate authentication?
 
 # Creating First Rails App
