@@ -9,7 +9,7 @@
 </p>
 
 <% if @article.comments.length == 0 %>
-  <div></div>
+  <% nil %>
 <% else %>
   <h4>Comments</h4>
   <%= render @article.comments %>
