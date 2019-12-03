@@ -1,8 +1,7 @@
 # To Do
 
-* Figure out how to add styling to each view
+* Figure out how to add styling/font to each view: Show, Create
 * Instead of welcome, make articles the root of app
-* Investigate authentication? or making a User model that owns the blog articles or something?
 
 # Creating First Rails App
 

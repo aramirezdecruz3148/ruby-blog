@@ -1,17 +1,25 @@
-<h1>Blog Articles</h1>
+<header id='header'>
+  <h1 id='page-title'>Blog Articles</h1>
+  <%= link_to 'Create New Article', new_article_path, class: 'link' %>
+</header>
 
-<%= link_to 'Create New Article', new_article_path %>
-
+<div id='container'>
 <% @articles.each do |article| %>
-  <ul>
-    <span>
-      <image class='blog-image' src=<%= article.image %> />
-      <li><%= article.title %></li>
-      <%= link_to 'View', article_path(article) %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Delete', article_path(article),
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %>
-    </span>
+  <ul id='article-list'>
+    <li>
+      <% if article.title.length > 25 %>
+        <h4 id='blog-title-long'><%= article.title %></h4>
+      <% else %>
+        <h4 id='blog-title'><%= article.title %></h4>
+      <% end %>
+      <div class='image' style='background-image: url(<%= article.image %>)'></div>
+      <div id='link-container'>
+        <%= link_to 'View', article_path(article), class: 'link' %>
+        <%= link_to 'Edit', edit_article_path(article), class: 'link' %>
+        <%= link_to 'Delete', article_path(article), class: 'link',
+        method: :delete %>
+      </div>
+    </li>
   </ul>
 <% end %>
+</div>
