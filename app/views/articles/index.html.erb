@@ -5,6 +5,7 @@
 <% @articles.each do |article| %>
   <ul>
     <span>
+      <image class='blog-image' src=<%= article.image %> />
       <li><%= article.title %></li>
       <%= link_to 'View', article_path(article) %>
       <%= link_to 'Edit', edit_article_path(article) %>
