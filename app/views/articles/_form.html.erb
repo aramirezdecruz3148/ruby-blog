@@ -14,20 +14,21 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.text_field :image, placeholder: 'Photo URL' %>
-  </p>
- 
-  <p>
-    <%= form.text_field :title, placeholder: 'Title' %>
-  </p>
- 
-  <p>
-    <%= form.text_area :text, placeholder: 'Text' %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
- 
+  <div id='form-container'>
+    <p>
+      <%= form.text_field :image, placeholder: 'Photo URL', class: 'input' %>
+    </p>
+  
+    <p>
+      <%= form.text_field :title, placeholder: 'Title', class: 'input' %>
+    </p>
+  
+    <p>
+      <%= form.text_area :text, placeholder: 'Text', class: 'field' %>
+    </p>
+  
+    <p>
+      <%= form.submit 'Publish', :class=> 'button' %>
+    </p>
+  </div>
 <% end %>

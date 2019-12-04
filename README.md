@@ -1,6 +1,6 @@
 # To Do
 
-* Figure out how to add styling/font to each view: Show, Create
+* Figure out how to add styling/font to each view: Create
 * Instead of welcome, make articles the root of app
 
 # Creating First Rails App
