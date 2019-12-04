@@ -1,9 +1,9 @@
-<header id='header'>
-  <h1 id='page-title'>Blog Articles</h1>
+<header class='header'>
+  <h1 class='page-title'>Blog Articles</h1>
   <%= link_to 'Create New Article', new_article_path, class: 'link' %>
 </header>
 
-<div id='container'>
+<body id='index-container'>
 <% @articles.each do |article| %>
   <ul id='article-list'>
     <li>
@@ -12,8 +12,8 @@
       <% else %>
         <h4 id='blog-title'><%= article.title %></h4>
       <% end %>
-      <div class='image' style='background-image: url(<%= article.image %>)'></div>
-      <div id='link-container'>
+      <div id='index-image' style='background-image: url(<%= article.image %>)'></div>
+      <div class='link-container'>
         <%= link_to 'View', article_path(article), class: 'link' %>
         <%= link_to 'Edit', edit_article_path(article), class: 'link' %>
         <%= link_to 'Delete', article_path(article), class: 'link',
@@ -22,4 +22,4 @@
     </li>
   </ul>
 <% end %>
-</div>
+</body>

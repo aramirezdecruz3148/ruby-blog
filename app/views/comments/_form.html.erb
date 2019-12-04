@@ -1,13 +1,11 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   
-  <p>Name:</p>
   <p>
-    <%= form.text_field :commenter %>
+    <%= form.text_field :commenter, placeholder: 'Name' %>
   </p>
 
-  <p>Comment:</p>
   <p>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, placeholder: 'Comment' %>
   </p>
   
   <p>

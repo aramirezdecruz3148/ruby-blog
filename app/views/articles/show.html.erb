@@ -1,22 +1,26 @@
-<image class='blog-image' src=<%= @article.image %> />
+<body id='show-container'>
+  <header class='header'>
+    <h1 class='page-title'>
+      <%= @article.title %>
+    </h1>
+    <div class='link-container'>
+      <%= link_to 'Edit', edit_article_path(@article), class: 'show-link' %>
+      <%= link_to 'Back', articles_path, class: 'show-link' %>
+    </div>
+  </header>
 
-<h1>
-  <%= @article.title %>
-</h1>
+  <div id='show-image' style='background-image: url(<%= @article.image %>)'></div>
+  <p id='blog-text'>
+    <%= @article.text %>
+  </p>
 
-<p>
-  <%= @article.text %>
-</p>
+  <% if @article.comments.length == 0 %>
+    <% nil %>
+  <% else %>
+    <%= render @article.comments %>
+  <% end %>
 
-<% if @article.comments.length == 0 %>
-  <% nil %>
-<% else %>
-  <h4>Comments</h4>
-  <%= render @article.comments %>
-<% end %>
-
-<h5>Add a comment:</h5>
-<%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Back', articles_path %>
+  <div id='create-comment-container'>
+    <%= render 'comments/form' %>
+  </div>
+</body>
